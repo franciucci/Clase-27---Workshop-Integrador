@@ -8,9 +8,9 @@ class Products {
 }
 //ARRAY CON TODOS LOS PRODUCTOS
 let cartArray = [
-  new Products("Vans", 4500, 0),
-  new Products("Adidas", 6500, 0),
-  new Products("DC", 5000, 0),
+  new Products("Zapatillas Vans", 4500, 0),
+  new Products("Zapatillas Adidas", 6500, 0),
+  new Products("Zapatillas DC", 5000, 0),
 ];
 // AGREGA PRODUCTOS AL CARRITO
 onLoadItemsInCart(); /* Actualiza el carrito al cargar la página */
@@ -88,18 +88,18 @@ function displayCart() {
       shoppingCart.innerHTML += `
       <div class="product">
         <div class="product-container">
-        <i class="fas fa-times"></i>
-        <img src="./assets/${item.name}.png">
-        <p class="product-name">${item.name}</p>
+          <i class="fas fa-times"></i>
+          <img src="./assets/${item.name}.png">
+          <p class="product-name">${item.name}</p>
         </div>
         <div class="price">$${item.price},00</div>
         <div class="quantity">
-        <i class="fas fa-plus-circle"></i>
-        <span>${item.inCart}</span>
-        <i class="fas fa-minus-circle"></i>
+          <i class="fas fa-plus-circle"></i>
+          <span>${item.inCart}</span>
+          <i class="fas fa-minus-circle"></i>
         </div> 
         <div class="total">
-        $${item.inCart * item.price},00
+          $${item.inCart * item.price},00
         </div>
       </div>
       `;
@@ -107,8 +107,8 @@ function displayCart() {
 
     shoppingCart.innerHTML += `
     <div class="basketTotalContainer">
-    <h4 class="basketTotalTitle">Compra Total</h4>
-    <h4 class="basketTotal">$${cartCost},00</h4>
+      <h4 class="basketTotalTitle">Compra Total</h4>
+      <h4 class="basketTotal">$${cartCost},00</h4>
     </div>
     `;
   }

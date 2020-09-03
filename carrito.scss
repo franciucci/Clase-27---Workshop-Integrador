@@ -1,0 +1,137 @@
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+}
+.logo {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+}
+.navbar {
+  background-color: black;
+  padding: 10px 25px;
+  display: flex;
+  justify-content: flex-end;
+  z-index: -10;
+  width: 100%;
+
+  .navlist-cont {
+    display: flex;
+    justify-content: space-between;
+    .navlist {
+      list-style: none;
+      display: flex;
+      margin: auto 15px;
+      &__li {
+        padding: 15px;
+        color: white;
+        text-transform: uppercase;
+      }
+    }
+    .search-bar {
+      padding: 10px;
+      border: 1px solid grey;
+      border-radius: 2px;
+      height: 24px;
+      margin: auto;
+    }
+    .search-logo {
+      padding: 10px;
+      margin: auto;
+      color: white;
+    }
+    .cart-logo {
+      margin: auto;
+      padding: 10px;
+      color: white;
+    }
+  }
+}
+.main-section {
+  margin-top: 30px;
+  margin-left: 230px;
+}
+.shopping-cart {
+  width: 100%;
+  max-width: 850px;
+  margin: 80px auto;
+  background: #eef3f3;
+  box-shadow: 1px 2px 3px 0px lightgray;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  .title {
+    height: 60px;
+    border-bottom: 1px solid #e1e8ee;
+    padding: 20px 30px;
+    color: #5e6977;
+    font-size: 24px;
+    font-weight: 400;
+  }
+  .titles-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 850px;
+    padding: 10px 0;
+    .cart {
+      font-weight: 600;
+      display: inline;
+      font-size: 18px;
+      padding: 5px 20px;
+      color: #5e6977;
+    }
+    .cart-title {
+      width: 45%;
+    }
+  }
+  .product {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid lightgray;
+  }
+}
+
+.products i {
+  font-size: 18px;
+  color: blue;
+  cursor: pointer;
+}
+.product-container {
+  width: 40%;
+  & i {
+    position: relative;
+    padding-right: 20px;
+    bottom: 25px;
+  }
+  .product-name {
+    font-size: 18px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    bottom: 25px;
+    margin-left: 20px;
+  }
+  & img {
+    width: 120px;
+  }
+}
+.basketTotalContainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 10px 60px;
+  .basketTotalTitle {
+    width: 30%;
+  }
+  .basketTotal {
+    width: 8%;
+  }
+}

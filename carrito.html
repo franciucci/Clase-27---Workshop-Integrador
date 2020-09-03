@@ -4,27 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carrito</title>
-    <link rel="stylesheet" href="style-carrito.css" type="text/css" />
+    <link rel="stylesheet" href="carrito.css" type="text/css" />
     <script
       src="https://kit.fontawesome.com/cabf1b3cb5.js"
       crossorigin="anonymous"
     ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <!--   <div class="topnav" id="myTopnav">
-    <nav>
-      <div class="logo">PICK ME!</div>
-      <ul class="menu-area">
-          <li><a href="#" class="active">Our Favs</a></li>
-          <li><a href="#" class="active">Latest Arrivals!</a></li>
-          <li><a href="#" class="active">Can't Miss!</a></li>
-          <li><a href="#" class="active">Must go!</a></li>
-      </ul>
-    </nav>
-  </div> -->
     <header class="header">
+      <a href="index.html"
+        ><img src="assets/logo.png" alt="shop logo" class="logo"
+      /></a>
       <nav class="navbar">
-        <img src="assets/logo.png" alt="shop logo" class="logo" />
         <div class="navlist-cont">
           <ul class="navlist">
             <li class="navlist__li">Categorías</li>
@@ -33,7 +28,11 @@
           </ul>
           <input type="text" placeholder="Buscar..." class="search-bar" />
           <i class="fas fa-search search-logo"></i>
-          <i class="fas fa-shopping-cart cart-logo" id="cart-logo"> (0)</i>
+          <a href="carrito.html" class="cart-logo"
+            ><i class="fas fa-shopping-cart cart-logo" id="cart-logo">
+              (0)</i
+            ></a
+          >
         </div>
       </nav>
     </header>
@@ -46,106 +45,14 @@
       <!-- Title -->
       <p class="title">Shopping Bag</p>
       <div class="titles-container">
-        <p class="cart">Producto</p>
-        <p class="cart">Precio</p>
-        <p class="cart">Cantidad</p>
-        <p class="cart">Total</p>
+        <p class="cart cart-title">Producto</p>
+        <p class="cart cart-price">Precio</p>
+        <p class="cart cart-quantity">Cantidad</p>
+        <p class="cart cart-total">Total</p>
       </div>
       <!-- Aca van los productos -->
-      <div class="products" id="products">
-
-      </div>
-      <!-- Product #1 -->
-      <!-- <div class="item">
-        <div class="buttons">
-          <span class="delete-btn"></span>
-          <span class="like-btn"></span>
-        </div>
-
-        <div class="image">
-          <img src="item-1.png" alt="" />
-        </div>
-
-        <div class="description">
-          <span>Nike Air Force</span>
-          <span>1 '07</span>
-          <span>Trainers in white</span>
-        </div>
-
-        <div class="quantity">
-          <button class="plus-btn" type="button" name="button">
-            <img src="plus.svg" alt="" />
-          </button>
-          <input type="text" name="name" value="1" />
-          <button class="minus-btn" type="button" name="button">
-            <img src="minus.svg" alt="" />
-          </button>
-        </div>
-
-        <div class="total-price">$549</div>
-      </div> -->
-
-      <!-- Product #2 -->
-      <!-- <div class="item">
-        <div class="buttons">
-          <span class="delete-btn"></span>
-          <span class="like-btn"></span>
-        </div>
-
-        <div class="image">
-          <img src="item-2.png" alt="" />
-        </div>
-
-        <div class="description">
-          <span>Nike Air Max</span>
-          <span>270</span>
-          <span>React Pink</span>
-        </div>
-
-        <div class="quantity">
-          <button class="plus-btn" type="button" name="button">
-            <img src="plus.svg" alt="" />
-          </button>
-          <input type="text" name="name" value="1" />
-          <button class="minus-btn" type="button" name="button">
-            <img src="minus.svg" alt="" />
-          </button>
-        </div>
-
-        <div class="total-price">$870</div>
-      </div> -->
-
-      <!-- Product #3 -->
-<!--       <div class="item">
-        <div class="buttons">
-          <span class="delete-btn"></span>
-          <span class="like-btn"></span>
-        </div>
-
-        <div class="image">
-          <img src="item-3.png" alt="" />
-        </div>
-
-        <div class="description">
-          <span>Nike Aire Pegasus</span>
-          <span>92</span>
-          <span>Lite Se</span>
-        </div>
-
-        <div class="quantity">
-          <button class="plus-btn" type="button" name="button">
-            <img src="plus.svg" alt="" />
-          </button>
-          <input type="text" name="name" value="1" />
-          <button class="minus-btn" type="button" name="button">
-            <img src="minus.svg" alt="" />
-          </button>
-        </div>
-
-        <div class="total-price">$349</div>
-      </div>
-    </div> -->
-    <!--End of SHOPPING CART-->
+      <div class="products" id="products"></div>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>
