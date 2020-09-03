@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,12 +9,12 @@ body {
   height: 100%;
   margin: 0;
   background-color: whitesmoke;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 /** Nav bar*/
 .menu-area li a {
   text-decoration: none;
-  color:  #fff;
+  color: #fff;
   letter-spacing: 1px;
   text-transform: uppercase;
   display: block;
@@ -24,7 +24,7 @@ body {
   position: relative;
   z-index: 1;
 }
-.menu-area li{
+.menu-area li {
   list-style: none;
   display: inline-block;
   padding-left: 10px;
@@ -56,39 +56,86 @@ nav {
 }
 .main-section {
   margin-top: 50px;
-  margin-left: 25px; 
+  margin-left: 25px;
   padding: 10px 20px 10px 10px;
 }
 /**Shopping Cart*/
 .shopping-cart {
-  width: 750px;
-  height: 423px;
+  width: 80%;
+  max-width: 650px;
   margin: 80px auto;
-  background: #FFFFFF;
-  box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+  background: #ffffff;
+  box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
- 
   display: flex;
   flex-direction: column;
 }
 .title {
   height: 60px;
-  border-bottom: 1px solid #E1E8EE;
+  border-bottom: 1px solid #e1e8ee;
   padding: 20px 30px;
-  color: #5E6977;
-  font-size: 18px;
+  color: #5e6977;
+  font-size: 24px;
   font-weight: 400;
 }
- 
+.titles-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 650px;
+  padding: 10px 0;
+}
+.product {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid lightgray;
+}
+.product-name {
+  text-align: center;
+}
+.product img {
+  width: 100px;
+  height: 80px;
+}
+.cart {
+  display: inline;
+  font-size: 18px;
+  padding: 5px 20px;
+  color: #5e6977;
+}
+.products i {
+  font-size: 18px;
+  color: blue;
+  cursor: pointer;
+}
+.product-container i {
+  position: relative;
+  bottom: 25px;
+}
+.basketTotalContainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 10px 60px;
+}
+.basketTotalTitle {
+  width: 30%;
+}
+.basketTotal {
+  width: 10%;
+}
 .item {
   padding: 20px 30px;
   height: 120px;
   display: flex;
 }
- 
+
 .item:nth-child(3) {
-  border-top:  1px solid #E1E8EE;
-  border-bottom:  1px solid #E1E8EE;
+  border-top: 1px solid #e1e8ee;
+  border-bottom: 1px solid #e1e8ee;
 }
 .buttons {
   position: relative;
@@ -98,19 +145,19 @@ nav {
 .delete-btn,
 .like-btn {
   display: inline-block;
-  Cursor: pointer;
+  cursor: pointer;
 }
 .delete-btn {
   width: 18px;
   height: 17px;
   background: url(&amp;quot;delete-icn.svg&amp;quot;) no-repeat center;
 }
- 
+
 .like-btn {
   position: absolute;
   top: 9px;
   left: 15px;
-  background: url('twitter-heart.png');
+  background: url("twitter-heart.png");
   width: 60px;
   height: 60px;
   background-size: 2900%;
@@ -118,60 +165,53 @@ nav {
 }
 .is-active {
   animation-name: animate;
-  animation-duration: .8s;
+  animation-duration: 0.8s;
   animation-iteration-count: 1;
   animation-timing-function: steps(28);
   animation-fill-mode: forwards;
 }
- 
+
 @keyframes animate {
-  0%   { background-position: left;  }
-  50%  { background-position: right; }
-  100% { background-position: right; }
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: right;
+  }
 }
 .image {
   margin-right: 50px;
 }
- 
+
 .description {
   padding-top: 10px;
   margin-right: 60px;
   width: 115px;
 }
- 
+
 .description span {
   display: block;
   font-size: 14px;
-  color: #43484D;
+  color: #43484d;
   font-weight: 400;
 }
- 
+
 .description span:first-child {
   margin-bottom: 5px;
 }
 .description span:last-child {
   font-weight: 300;
   margin-top: 8px;
-  color: #86939E;
+  color: #86939e;
 }
-.quantity {
-  padding-top: 20px;
-  margin-right: 60px;
-}
-.quantity input {
-  -webkit-appearance: none;
-  border: none;
-  text-align: center;
-  width: 32px;
-  font-size: 16px;
-  color: #43484D;
-  font-weight: 300;
-}
- 
-button[class*=btn] {
+
+button[class*="btn"] {
   width: 30px;
   height: 30px;
-  background-color: #E1E8EE;
+  background-color: #e1e8ee;
   border-radius: 6px;
   border: none;
   cursor: pointer;
@@ -182,16 +222,16 @@ button[class*=btn] {
 .plus-btn img {
   margin-top: 2px;
 }
- 
+
 button:focus,
 input:focus {
-  outline:0;
+  outline: 0;
 }
 .total-price {
   width: 83px;
   padding-top: 27px;
   text-align: center;
   font-size: 16px;
-  color: #43484D;
+  color: #43484d;
   font-weight: 300;
 }

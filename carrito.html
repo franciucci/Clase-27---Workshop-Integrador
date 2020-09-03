@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carrito</title>
-    <link rel="stylesheet" href="style-carrito.css" type="text/css"/>
-</head>
-<body>
-  <div class="topnav" id="myTopnav">
+    <link rel="stylesheet" href="style-carrito.css" type="text/css" />
+    <script
+      src="https://kit.fontawesome.com/cabf1b3cb5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!--   <div class="topnav" id="myTopnav">
     <nav>
       <div class="logo">PICK ME!</div>
       <ul class="menu-area">
@@ -17,109 +21,131 @@
           <li><a href="#" class="active">Must go!</a></li>
       </ul>
     </nav>
-  </div>
-  <div class="main-section">
-    <h2>YOUR SHOPPING CART</h2>
-    <p>You have selected the following items</p>
-  </div>
-  <!-- Shopping Cart-->
-  <div class="shopping-cart">
-    <!-- Title -->
-    <div class="title">
-      Shopping Bag
+  </div> -->
+    <header class="header">
+      <nav class="navbar">
+        <img src="assets/logo.png" alt="shop logo" class="logo" />
+        <div class="navlist-cont">
+          <ul class="navlist">
+            <li class="navlist__li">Categorías</li>
+            <li class="navlist__li">Ofertas</li>
+            <li class="navlist__li">Log In/Sign Up</li>
+          </ul>
+          <input type="text" placeholder="Buscar..." class="search-bar" />
+          <i class="fas fa-search search-logo"></i>
+          <i class="fas fa-shopping-cart cart-logo" id="cart-logo"> (0)</i>
+        </div>
+      </nav>
+    </header>
+    <div class="main-section">
+      <h2>YOUR SHOPPING CART</h2>
+      <p>You have selected the following items</p>
     </div>
-   
-    <!-- Product #1 -->
-    <div class="item">
-      <div class="buttons">
-        <span class="delete-btn"></span>
-        <span class="like-btn"></span>
+    <!-- Shopping Cart-->
+    <div class="shopping-cart">
+      <!-- Title -->
+      <p class="title">Shopping Bag</p>
+      <div class="titles-container">
+        <p class="cart">Producto</p>
+        <p class="cart">Precio</p>
+        <p class="cart">Cantidad</p>
+        <p class="cart">Total</p>
       </div>
-   
-      <div class="image">
-        <img src="item-1.png" alt="" />
+      <!-- Aca van los productos -->
+      <div class="products" id="products">
+
       </div>
-   
-      <div class="description">
-        <span>Nike Air Force</span>
-        <span>1 '07</span>
-        <span>Trainers in white</span>
+      <!-- Product #1 -->
+      <!-- <div class="item">
+        <div class="buttons">
+          <span class="delete-btn"></span>
+          <span class="like-btn"></span>
+        </div>
+
+        <div class="image">
+          <img src="item-1.png" alt="" />
+        </div>
+
+        <div class="description">
+          <span>Nike Air Force</span>
+          <span>1 '07</span>
+          <span>Trainers in white</span>
+        </div>
+
+        <div class="quantity">
+          <button class="plus-btn" type="button" name="button">
+            <img src="plus.svg" alt="" />
+          </button>
+          <input type="text" name="name" value="1" />
+          <button class="minus-btn" type="button" name="button">
+            <img src="minus.svg" alt="" />
+          </button>
+        </div>
+
+        <div class="total-price">$549</div>
+      </div> -->
+
+      <!-- Product #2 -->
+      <!-- <div class="item">
+        <div class="buttons">
+          <span class="delete-btn"></span>
+          <span class="like-btn"></span>
+        </div>
+
+        <div class="image">
+          <img src="item-2.png" alt="" />
+        </div>
+
+        <div class="description">
+          <span>Nike Air Max</span>
+          <span>270</span>
+          <span>React Pink</span>
+        </div>
+
+        <div class="quantity">
+          <button class="plus-btn" type="button" name="button">
+            <img src="plus.svg" alt="" />
+          </button>
+          <input type="text" name="name" value="1" />
+          <button class="minus-btn" type="button" name="button">
+            <img src="minus.svg" alt="" />
+          </button>
+        </div>
+
+        <div class="total-price">$870</div>
+      </div> -->
+
+      <!-- Product #3 -->
+<!--       <div class="item">
+        <div class="buttons">
+          <span class="delete-btn"></span>
+          <span class="like-btn"></span>
+        </div>
+
+        <div class="image">
+          <img src="item-3.png" alt="" />
+        </div>
+
+        <div class="description">
+          <span>Nike Aire Pegasus</span>
+          <span>92</span>
+          <span>Lite Se</span>
+        </div>
+
+        <div class="quantity">
+          <button class="plus-btn" type="button" name="button">
+            <img src="plus.svg" alt="" />
+          </button>
+          <input type="text" name="name" value="1" />
+          <button class="minus-btn" type="button" name="button">
+            <img src="minus.svg" alt="" />
+          </button>
+        </div>
+
+        <div class="total-price">$349</div>
       </div>
-   
-      <div class="quantity">
-        <button class="plus-btn" type="button" name="button">
-          <img src="plus.svg" alt="" />
-        </button>
-        <input type="text" name="name" value="1">
-        <button class="minus-btn" type="button" name="button">
-          <img src="minus.svg" alt="" />
-        </button>
-      </div>
-   
-      <div class="total-price">$549</div>
-    </div>
-   
-    <!-- Product #2 -->
-    <div class="item">
-      <div class="buttons">
-        <span class="delete-btn"></span>
-        <span class="like-btn"></span>
-      </div>
-   
-      <div class="image">
-        <img src="item-2.png" alt=""/>
-      </div>
-   
-      <div class="description">
-        <span>Nike Air Max</span>
-        <span>270</span>
-        <span>React Pink</span>
-      </div>
-   
-      <div class="quantity">
-        <button class="plus-btn" type="button" name="button">
-          <img src="plus.svg" alt="" />
-        </button>
-        <input type="text" name="name" value="1">
-        <button class="minus-btn" type="button" name="button">
-          <img src="minus.svg" alt="" />
-        </button>
-      </div>
-   
-      <div class="total-price">$870</div>
-    </div>
-   
-    <!-- Product #3 -->
-    <div class="item">
-      <div class="buttons">
-        <span class="delete-btn"></span>
-        <span class="like-btn"></span>
-      </div>
-   
-      <div class="image">
-        <img src="item-3.png" alt="" />
-      </div>
-   
-      <div class="description">
-        <span>Nike Aire Pegasus</span>
-        <span>92</span>
-        <span>Lite Se</span>
-      </div>
-   
-      <div class="quantity">
-        <button class="plus-btn" type="button" name="button">
-          <img src="plus.svg" alt="" />
-        </button>
-        <input type="text" name="name" value="1">
-        <button class="minus-btn" type="button" name="button">
-          <img src="minus.svg" alt="" />
-        </button>
-      </div>
-   
-      <div class="total-price">$349</div>
-    </div>
-  </div>
-  <!--End of SHOPPING CART-->
-  <script type="text/javascript" src="carrito.js"></script>
-</body>
+    </div> -->
+    <!--End of SHOPPING CART-->
+    <script src="main.js"></script>
+  </body>
 </html>

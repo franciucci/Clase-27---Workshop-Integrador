@@ -13,14 +13,15 @@ let cartArray = [
   new Products("DC", 5000, 0),
 ];
 // AGREGA PRODUCTOS AL CARRITO
-onLoadItemsInCart();
+onLoadItemsInCart(); /* Actualiza el carrito al cargar la página */
+displayCart(); /* Si está en la página de carrito muestra los productos */
 const btnAddToCart = document.getElementsByClassName("btn-addcart");
-console.log(btnAddToCart); // checkeo que este tomando bien los elementos
 for (let i = 0; i < btnAddToCart.length; i++) {
   let buttonAdd = btnAddToCart[i];
   buttonAdd.addEventListener("click", () => {
     itemsInCart(cartArray[i]);
     totalCost(cartArray[i]);
+    buttonAdd.style.outline = "none";
   });
 }
 
@@ -58,7 +59,7 @@ function setItems(product) {
 
   localStorage.setItem("productsInCart", JSON.stringify(productsCart));
 }
-// FUNCIÓN PARA GUARDAR LOS ITEMS AGREGADOS AL LOCALSTORAGE
+// FUNCIÓN PARA MOSTRAR LA CANT. DE ITEMS EN EL CARRITO
 function onLoadItemsInCart() {
   let itemsInCart = localStorage.getItem("itemsInCart");
   if (itemsInCart) {
@@ -73,5 +74,42 @@ function totalCost(product) {
     localStorage.setItem("totalCost", cartCost + product.price);
   } else {
     localStorage.setItem("totalCost", product.price);
+  }
+}
+// FUNCIÓN QUE MUESTRA LOS PRODUCTOS DEL CARRITO
+function displayCart() {
+  let cartCost = localStorage.getItem("totalCost");
+  let cartProducts = localStorage.getItem("productsInCart");
+  cartProducts = JSON.parse(cartProducts);
+  let shoppingCart = document.getElementById("products");
+  if (cartProducts && shoppingCart) {
+    shoppingCart.innerHTML = "";
+    Object.values(cartProducts).map((item) => {
+      shoppingCart.innerHTML += `
+      <div class="product">
+        <div class="product-container">
+        <i class="fas fa-times"></i>
+        <img src="./assets/${item.name}.png">
+        <p class="product-name">${item.name}</p>
+        </div>
+        <div class="price">$${item.price},00</div>
+        <div class="quantity">
+        <i class="fas fa-plus-circle"></i>
+        <span>${item.inCart}</span>
+        <i class="fas fa-minus-circle"></i>
+        </div> 
+        <div class="total">
+        $${item.inCart * item.price},00
+        </div>
+      </div>
+      `;
+    });
+
+    shoppingCart.innerHTML += `
+    <div class="basketTotalContainer">
+    <h4 class="basketTotalTitle">Compra Total</h4>
+    <h4 class="basketTotal">$${cartCost},00</h4>
+    </div>
+    `;
   }
 }
